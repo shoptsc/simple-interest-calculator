@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App - Simple Interest Calculator</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <h1>Simple Interest Calculator</h1>
+
+        <form class="form">
+
+            <div class="form-item">
+                <label for="principal">Amount</label> 
+                <input type="number"  id="principal">
+            </div>
+
+            <div class="form-item">
+                <label for="rate">Interest Rate</label>
+                <div class="range">
+                    <input type="range" min="1" max="100" value="1" class="slider" id="rate" step="0.05">
+                    <p class="rate">1%</p>
+                </div>
+            </div>
+         
+            <div class="form-item">
+                <label for="years"> No. of Years</label>
+                <select name="" id="year" onmousedown="if(this.options.length>8){this.size=8;}"  onchange='this.size=0;' onblur="this.size=0;">
+                        <option value="">Select Year</option>
+                </select>
+            </div>
+          
+            <button>Compute Interest</button>
+
+            <div class="form-text">
+                <p id="result">
+                   If you deposit <span class="one"></span><br> 
+                   at an interest rate of <span class="two"></span> <br>
+                   You will receive an amount of <span class="three"></span><br>
+                   in the year <span class="four">2022</span>
+                </p>
+            </div>
+
+        </form>
+
+        <footer>
+            <p>&copy; Everyone Can Be Rich</p>
+            <p>This Calculator belongs to Hamed Sanusi</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
